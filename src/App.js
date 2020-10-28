@@ -7,7 +7,7 @@ import JumbotronHeader from './components/JumbotronHeader';
 
 function App() {
   return (
-    <div>
+    <div id='App'>
       <JumbotronHeader />
       <PokeApi/>
     </div>

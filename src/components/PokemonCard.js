@@ -23,16 +23,18 @@ class PokemonCard extends React.Component {
   }
 
   render() {
+    const image = this.props.pokemon.sprites.other.dream_world.front_default ? this.props.pokemon.sprites.other.dream_world.front_default : this.props.pokemon.sprites.front_default;
+
     return (
       <Card
-        style={{minWidth: '18rem'}}
+        style={{minWidth: '17rem'}}
         className='mb-4'
       >
         <Card.Img
           variant='top'
-          src={this.props.pokemon.sprites.other.dream_world.front_default}
+          src={image}
           onLoad={this.handleImageLoaded.bind(this)}
-          style={{maxHeight: '125px'}}
+          style={{height: '125px', width: 'auto'}}
           className='mt-4'
         >
         </Card.Img>
@@ -42,10 +44,11 @@ class PokemonCard extends React.Component {
           >
             {this.handleLoadingImageDisplay()}
           </div>
-          <Card.Title
-            className='mb-0 text-center'
-          >
-            {this.props.pokemon.name}
+          <Card.Text className='text-center'>
+            <span>#{this.props.pokemon.id}</span>
+          </Card.Text>
+          <Card.Title className='mb-0 text-center'>
+            <span>{this.props.pokemon.name}</span>
           </Card.Title>
         </Card.Body>
       </Card>

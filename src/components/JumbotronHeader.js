@@ -4,10 +4,10 @@ import React from 'react';
 function JumbotronHeader() {
   return (
     <Jumbotron>
-      <h1>Hello, world!</h1>
+      <h1>Pokedex</h1>
       <p>
-        This is a simple hero unit, a simple jumbotron-style component for calling
-        extra attention to featured content or information.
+        This is a simple pokedex, using the PokeApi which can be found <a href='https://pokeapi.co/' target='_blank'
+                                                                          rel='noreferrer'>here</a>
       </p>
     </Jumbotron>
   )
